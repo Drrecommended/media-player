@@ -1,0 +1,25 @@
+* {
+    margin: 0;  
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    min-height: 100vh;
+    background: rgb(245, 220, 191);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-container {
+    border-radius: 20px;
+    box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
+    height: 500px;
+    width: 400px;
+    background: rgb(160, 137, 111);
+}
