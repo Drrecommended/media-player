@@ -10,6 +10,7 @@ const prevButton = document.getElementById("prev");
 const playButton = document.getElementById("play");
 const nextButton = document.getElementById("next");
 const muteButton = document.getElementById("mute");
+const volumeControl = document.getElementById("vol-control");
 
 //Music
 const songs = [
@@ -134,19 +135,21 @@ function setProgressBar(e) {
   music.currentTime = (clickX / width) * duration;
 }
 
+//handle volume change
 
-//mute song
-function handleMute() {
-    if(isPlayling) {
-        music.muted = true
-    } 
-    if(music.muted == true) {
-        music.muted = false
-    }
-} 
+function handleVolume() {
+    music.volume = this .value / 100
+}
 
+//mute song//////////////////////////////////////////////////////////////////////
+// function handleMute() {
+//     music.muted = false
+//     if(isPlayling) {
+//         music.muted = true
+//     }
+// }
 
-muteButton.addEventListener("click", handleMute);
+// muteButton.addEventListener("click", handleMute);
 
 // event listeners
 prevButton.addEventListener("click", prevSong);
@@ -154,3 +157,5 @@ nextButton.addEventListener("click", nextSong);
 music.addEventListener("timeupdate", updateProgressBar);
 music.addEventListener("ended", nextSong);
 progressContainer.addEventListener("click", setProgressBar);
+volumeControl.addEventListener("change", handleVolume);
+volumeControl.addEventListener("input", handleVolume);
