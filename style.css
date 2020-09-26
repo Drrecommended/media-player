@@ -1,94 +1,90 @@
 * {
-    margin: 0;  
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 body {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 12px;
-    min-height: 100vh;
-    background: rgb(245, 220, 191);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-family: "Press Start 2P", cursive;
+  font-size: 12px;
+  min-height: 100vh;
+  background: rgb(245, 220, 191);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .player-container {
-    border-radius: 20px;
-    box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
-    height: 500px;
-    width: 400px;
-    background: rgb(160, 137, 111);
+  border-radius: 20px;
+  box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
+  height: 500px;
+  width: 400px;
+  background: rgb(160, 137, 111);
 }
 
 .img-container {
-    height: 300px;
-    width: 300px;
-    position: relative;
-    top: -50;
-    left: 50px;
+  height: 300px;
+  width: 300px;
+  position: relative;
+  top: -50;
+  left: 50px;
 }
 
 .img-container img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.5);
 }
 
-.progress-container {
-    height: 4px;
-    width: 90%;
-    background: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 40px 20px;
+#progress-container {
+  height: 4px;
+  width: 90%;
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 40px 20px;
 }
 
-
-.progress {
-    background: #242323;
-    border-radius: 5px; 
-    height: 100%;
-    width: 66%;
-    transition: width 0.1s linear;
+#progress {
+  background: black;
+  border-radius: 5px;
+  height: 100%;
+  width: 66%;
+  transition: width 0.1s linear;
 }
 
 .duration-wrapper {
-    position: relative;
-    top: -25px;
-    display: flex;
-    justify-content: space-between;
+  position: relative;
+  top: -25px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .player-controls {
-    position: relative;
-    top: -15px;
-    left: 120px;
-    width: 200px;
+  position: relative;
+  top: -15px;
+  left: 120px;
+  width: 200px;
 }
 
 .fas {
-    font-size: 30px;
-    margin-right: 25px;
-    color: rgb(228, 211, 62);
-    cursor: pointer;
-    user-select: none;
+  font-size: 30px;
+  margin-right: 25px;
+  color: rgb(228, 211, 62);
+  cursor: pointer;
+  user-select: none;
 }
 
 .fas:hover {
-    filter: brightness(80%);
+  filter: brightness(80%);
 }
-
-
 
 @media screen and (max-width: 376px) {
-    .player-container {
-        width: 95vw;
-    }
+  .player-container {
+    width: 95vw;
+  }
 }
-
