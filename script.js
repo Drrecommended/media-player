@@ -46,6 +46,10 @@ function playSong() {
   isPlayling = true;
   playButton.classList.replace("fa-play", "fa-pause");
   playButton.setAttribute("title", "pause");
+  if(isPlayling) {
+    muteButton.classList.replace( "fa-volume-mute", "fa-volume-up");
+    muteButton.setAttribute("title", "mute");
+  }
   music.play();
 }
 
@@ -55,6 +59,10 @@ function pauseSong() {
   isPlayling = false;
   playButton.classList.replace("fa-pause", "fa-play");
   playButton.setAttribute("title", "play");
+  if(!isPlayling && !isMuted) {
+    muteButton.classList.replace("fa-volume-up", "fa-volume-mute");
+    muteButton.setAttribute("title", "mute");
+  }
   music.pause();
 }
 
@@ -155,19 +163,20 @@ let isMuted = false;
 
 //mute song
 function muteSong() {
-  //   isMuted = true;
-  //   muteButton.classList.replace('fa-volume-up', 'fa-volume-mute')
+    isMuted = true;
+    
+    muteButton.classList.replace('fa-volume-up', 'fa-volume-mute')
 }
 
 //unmute song
 function unmuteSong() {
-  // isMuted = false
-  // muteButton.classList.replace('fa-volume-up', 'fa-volume-mute')
+  isMuted = false
+  muteButton.classList.replace('fa-volume-up', 'fa-volume-mute')
 }
 
 //mute or unmute event listener
 muteButton.addEventListener("click", () =>
-  isMuted ? muteSong() : unmuteSong()
+  isMuted ? unmuteSong() : muteSong()
 );
 
 // event listeners
