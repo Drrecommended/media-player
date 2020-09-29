@@ -46,8 +46,8 @@ function playSong() {
   isPlayling = true;
   playButton.classList.replace("fa-play", "fa-pause");
   playButton.setAttribute("title", "pause");
-  if(isPlayling) {
-    muteButton.classList.replace( "fa-volume-mute", "fa-volume-up");
+  if (isPlayling) {
+    muteButton.classList.replace("fa-volume-mute", "fa-volume-up");
     muteButton.setAttribute("title", "mute");
   }
   music.play();
@@ -59,7 +59,7 @@ function pauseSong() {
   isPlayling = false;
   playButton.classList.replace("fa-pause", "fa-play");
   playButton.setAttribute("title", "play");
-  if(!isPlayling && !isMuted) {
+  if (!isPlayling) {
     muteButton.classList.replace("fa-volume-up", "fa-volume-mute");
     muteButton.setAttribute("title", "mute");
   }
@@ -153,30 +153,31 @@ function handleVolume() {
     muteButton.classList.replace("fa-volume-mute", "fa-volume-up");
     muteButton.setAttribute("title", "mute");
   } else {
-    muteButton.classList.replace( "fa-volume-up", "fa-volume-mute");
+    playSong();
+    muteButton.classList.replace("fa-volume-up", "fa-volume-mute");
     muteButton.setAttribute("title", "mute");
   }
 }
 
-//check if muted
-let isMuted = false;
+// // check if muted
+// let isMuted = false;
+// //mute song
 
-//mute song
 function muteSong() {
-    isMuted = true;
-    
-    muteButton.classList.replace('fa-volume-up', 'fa-volume-mute')
+  music.muted = true;
+  muteButton.classList.replace("fa-volume-up", "fa-volume-mute");
 }
 
 //unmute song
 function unmuteSong() {
-  isMuted = false
-  muteButton.classList.replace('fa-volume-up', 'fa-volume-mute')
+  music.muted = false;
+  playSong();
+  muteButton.classList.replace("fa-volume-mute", "fa-volume-up");
 }
 
 //mute or unmute event listener
 muteButton.addEventListener("click", () =>
-  isMuted ? unmuteSong() : muteSong()
+  isPlayling ? muteSong() : unmuteSong()
 );
 
 // event listeners

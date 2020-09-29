@@ -1,41 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>music-player</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="player-container">
-        <div class="img-container">
-            <img src="" alt="album-art">
-        </div>
+      <div class="img-container">
+        <img src="" alt="album-art" />
+      </div>
+      <div id="song-info">
         <h2 id="title"></h2>
         <h3 id="artist"></h3>
-        <audio id="myAudio" src="music/Fantastic Man - Won't Somebody Think of the Children.mp3"></audio>
         <!-- progress bar -->
         <div id="progress-container">
-            <div id="progress"></div>
-            <div class="duration-wrapper">
-                <span id="current-time">0:00</span>
-                <span id="duration">7:06</span>
-            </div>
+          <div id="progress"></div>
+          <div class="duration-wrapper">
+            <span id="current-time">0:00</span>
+            <span id="duration">7:06</span>
+          </div>
         </div>
-        <!-- controls -->
-        <div class="player-controls">
-            <i class="fas fa-backward" id="prev" title="previous"></i>
-            <i class="fas fa-play main-button" id="play" title="play"></i>
-            <i class="fas fa-forward" id="next" title="next"></i>
-            <i class="fas fa-volume-mute" id="mute" title="mute"></i>
-            <input type="range" id="vol-control" min="0" max="100" step="1">
-        </div>
+
+        <audio
+          id="myAudio"
+          src="music/Fantastic Man - Won't Somebody Think of the Children.mp3"
+        ></audio>
+      </div>
+      <!-- controls -->
+      <div class="player-controls">
+        <i class="fas fa-backward" id="prev" title="previous"></i>
+        <i class="fas fa-play main-button" id="play" title="play"></i>
+        <i class="fas fa-forward" id="next" title="next"></i>
+        <i class="fas fa-volume-mute" id="mute" title="mute"></i>
+        <input type="range" id="vol-control" min="0" max="100" step="1" />
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
-
-
-

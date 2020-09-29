@@ -19,7 +19,7 @@ body {
 .player-container {
   border-radius: 20px;
   box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
-  height: 500px;
+  height: 600px;
   width: 400px;
   background: rgb(160, 137, 111);
 }
@@ -38,6 +38,27 @@ body {
   object-fit: cover;
   border-radius: 20px;
   box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.5);
+}
+
+#song-info {
+    border: black solid;
+    background-color :rgb(43, 48, 39);
+    color: #42AF98;
+    width: 90%;
+    position: relative;
+    margin: auto;
+}
+
+#song-info #title {
+    width: 100%;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transition: text-indent 7s linear;
+}
+
+#song-info:hover #title {
+    text-indent: -400px;
 }
 
 #progress-container {
