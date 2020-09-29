@@ -20,16 +20,21 @@ body {
   border-radius: 20px;
   box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
   height: 600px;
-  width: 400px;
-  background: rgb(160, 137, 111);
+  width: 380px;
+  background: #626262;
+  border: #c8c9bb solid;
 }
 
 .img-container {
   height: 300px;
-  width: 300px;
+  width: 334px;
   position: relative;
   top: -50;
-  left: 50px;
+  margin: auto;
+  border-radius: 20px;
+  background-color: #c8c9bb;
+  border: #c8c9bb solid;
+  margin-top: 20px;
 }
 
 .img-container img {
@@ -40,25 +45,37 @@ body {
   box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.5);
 }
 
-#song-info {
-    border: black solid;
-    background-color :rgb(43, 48, 39);
-    color: #42AF98;
-    width: 90%;
-    position: relative;
-    margin: auto;
+#song-info-container {
+  border: #c8c9bb solid;
+  background-color: rgb(43, 48, 39);
+  color: #42af98;
+  width: 90%;
+  position: relative;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 20px;
 }
 
-#song-info #title {
-    width: 100%;
-    overflow-x: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    transition: text-indent 7s linear;
+#song-info-container #title {
+  width: 95%;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: text-indent 7s linear;
+  margin: 10px;
 }
 
-#song-info:hover #title {
-    text-indent: -400px;
+#song-info-container #artist {
+  width: 95%;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: text-indent 7s linear;
+  margin: 10px;
+}
+
+#song-info-container:hover #title {
+  text-indent: -400px;
 }
 
 #progress-container {
@@ -87,15 +104,15 @@ body {
 
 .player-controls {
   position: relative;
-  top: -15px;
-  left: 120px;
   width: 200px;
+  margin: auto;
+  margin-top: 20px;
 }
 
 .fas {
   font-size: 30px;
-  margin-right: 25px;
-  color: rgb(228, 211, 62);
+  margin-right: px;
+  color: black;
   cursor: pointer;
   user-select: none;
 }
