@@ -22,6 +22,7 @@
       <div id="song-info-container">
         <h2 id="title"></h2>
         <h3 id="artist"></h3>
+        <i class="fas fa-volume-mute" id="mute" title="mute"></i>
         <!-- progress bar -->
         <div id="progress-container">
           <div id="progress"></div>
@@ -38,13 +39,18 @@
       </div>
       <!-- controls -->
       <div class="player-controls">
-        <i class="fas fa-backward" id="prev" title="previous"></i>
-        <i class="fas fa-play main-button" id="play" title="play"></i>
-        <i class="fas fa-forward" id="next" title="next"></i>
+        <div class="button-wrapper">
+          <i class="fas fa-backward" id="prev" title="previous"></i>
+        </div>
+        <div class="button-wrapper">
+          <i class="fas fa-play main-button" id="play" title="play"></i>
+        </div>
+        <div class="button-wrapper">
+          <i class="fas fa-forward" id="next" title="next"></i>
+        </div>
       </div>
-      <i class="fas fa-volume-mute" id="mute" title="mute"></i>
-      <input type="range" id="vol-control" min="0" max="100" step="1" />
     </div>
+    <!-- <input type="range" id="vol-control" min="0" max="100" step="1" /> -->
     <script src="script.js"></script>
   </body>
 </html>
