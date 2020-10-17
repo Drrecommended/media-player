@@ -22,7 +22,7 @@
         <i class="fas fa-sun"></i>
       </span>
       <label class="theme-switch">
-        <input type="checkbox">
+        <input type="checkbox" />
         <div class="slider round"></div>
       </label>
     </div>
@@ -55,18 +55,24 @@
       </div>
       <!-- controls -->
       <div class="player-controls">
-        <div class="button-wrapper">
-          <i class="fas fa-backward" id="prev" title="previous"></i>
+        <div class="button-wrapper" id="prev">
+          <i class="fas fa-backward" title="previous"></i>
         </div>
         <div class="button-wrapper">
           <i class="fas fa-play main-button" id="play" title="play"></i>
+          <i class="fas fa-pause" title="pause"></i>
         </div>
-        <div class="button-wrapper">
-          <i class="fas fa-forward" id="next" title="next"></i>
+        <div class="button-wrapper" id="next" >
+          <i class="fas fa-forward" title="next"></i>
         </div>
       </div>
+      <div id="volumeButtonBox">
+        <input type="range" id="vol-control" min="0" max="100" step="1" />
+        <div id="volumeButtonDown">'</div>
+      </div>
+
     </div>
-    <!-- <input type="range" id="vol-control" min="0" max="100" step="1" /> -->
+
     <script src="media.js"></script>
     <script src="darkmode.js"></script>
   </body>
