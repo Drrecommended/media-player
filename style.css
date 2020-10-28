@@ -103,6 +103,13 @@ body {
   color: #42af98;
 }
 
+#play-icon {
+  position: absolute;
+  margin-left: 20px;
+  bottom: 10px;
+  color: #42af98;
+}
+
 #progress {
   background: #42af98;
   border-radius: 5px;
@@ -137,31 +144,6 @@ body {
   text-align: center;
 }
 
-.fas {
-  color: black;
-  user-select: none;
-  margin-top: 14px;
-}
-
-#play {
-  margin-left: 8px;
-  font-size: 45px;
-}
-
-#pause {
-  margin-bottom: 10px;
-  font-size: 45px;
-}
-
-.fa-forward {
-  margin-left: 7px;
-  font-size: 45px;
-  bottom: 2px;
-}
-
-#prev {
-  font-size: 45px;
-}
 
 .button-wrapper:hover {
   filter: brightness(80%);
@@ -194,7 +176,7 @@ body {
   width: 7px;
   height: 48px;
   position: relative;
-  bottom: 80px;
+ 
   margin-top: 10px;
   border-radius: 10%;
 }

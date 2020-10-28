@@ -38,6 +38,7 @@
       <div id="song-info-container">
         <h2 id="title"></h2>
         <h3 id="artist"></h3>
+        <i class="fa fa-play" id="play-icon"></i>
         <i class="fas fa-volume-mute" id="mute" title="mute"></i>
         <!-- progress bar -->
         <div id="progress-container">
@@ -58,9 +59,9 @@
         <div class="button-wrapper" id="prev">
           <i class="fas fa-backward" title="previous"></i>
         </div>
-        <div class="button-wrapper">
-          <i class="fas fa-play main-button" id="play" title="play"></i>
-          <i class="fas fa-pause" title="pause"></i>
+        <div class="button-wrapper" id="play" title="play-pause">
+          <i class="fas fa-play main-button"></i>
+          <i class="fas fa-pause"></i>
         </div>
         <div class="button-wrapper" id="next" >
           <i class="fas fa-forward" title="next"></i>
@@ -68,7 +69,7 @@
       </div>
       <div id="volumeButtonBox">
         <input type="range" id="vol-control" min="0" max="100" step="1" />
-        <div id="volumeButtonDown">'</div>
+        <span id="volumeButtonDown"></span>
       </div>
 
     </div>

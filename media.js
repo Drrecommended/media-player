@@ -148,7 +148,6 @@ function setProgressBar(e) {
 function handleVolume() {
   music.volume = this.value / 100;
   let checkMute = music.volume;
-  console.log(checkMute);
   if (checkMute && isPlayling) {
     muteButton.classList.replace("fa-volume-mute", "fa-volume-up");
     muteButton.setAttribute("title", "mute");
@@ -159,26 +158,6 @@ function handleVolume() {
   }
 }
 
-// // check if muted
-// let isMuted = false;
-// //mute song
-
-function muteSong() {
-  music.muted = true;
-  muteButton.classList.replace("fa-volume-up", "fa-volume-mute");
-}
-
-//unmute song
-function unmuteSong() {
-  music.muted = false;
-  playSong();
-  muteButton.classList.replace("fa-volume-mute", "fa-volume-up");
-}
-
-//mute or unmute event listener
-muteButton.addEventListener("click", () =>
-  isPlayling ? muteSong() : unmuteSong()
-);
 
 // event listeners
 prevButton.addEventListener("click", prevSong);

@@ -126,8 +126,3 @@ input:checked + .slider::before {
 .slider.round::before {
   border-radius: 50%;
 }
-
-.fas {
-  font-size: 30px;
-  margin-right: 5px;
-}
