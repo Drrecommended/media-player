@@ -16,16 +16,6 @@
     <link rel="stylesheet" href="darkmode.css" />
   </head>
   <body>
-    <div class="theme-switch">
-      <span id="toggle-icon">
-        <span class="toggle-text">Light Mode</span>
-        <i class="fas fa-sun"></i>
-      </span>
-      <label class="theme-switch">
-        <input type="checkbox" />
-        <div class="slider round"></div>
-      </label>
-    </div>
     <!-- nav bar-->
     <nav id="nav">
       <a href="">Back</a>
@@ -34,11 +24,15 @@
     <div class="player-container">
       <div class="img-container">
         <img src="" alt="album-art" />
+        <div id="volumeButtonBox">
+          <input type="range" id="vol-control" min="0" max="100" step="1" />
+          <span id="volume-buttoup"></span>
+          <span id="volumeButtonDown"></span>
+        </div>
       </div>
       <div id="song-info-container">
         <h2 id="title"></h2>
         <h3 id="artist"></h3>
-        <i class="fa fa-play" id="play-icon"></i>
         <i class="fas fa-volume-mute" id="mute" title="mute"></i>
         <!-- progress bar -->
         <div id="progress-container">
@@ -63,15 +57,10 @@
           <i class="fas fa-play main-button"></i>
           <i class="fas fa-pause"></i>
         </div>
-        <div class="button-wrapper" id="next" >
+        <div class="button-wrapper" id="next">
           <i class="fas fa-forward" title="next"></i>
         </div>
       </div>
-      <div id="volumeButtonBox">
-        <input type="range" id="vol-control" min="0" max="100" step="1" />
-        <span id="volumeButtonDown"></span>
-      </div>
-
     </div>
 
     <script src="media.js"></script>
