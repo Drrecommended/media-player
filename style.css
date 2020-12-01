@@ -29,7 +29,7 @@ body {
   box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
   height: 534px;
   width: 380px;
-  background: #ffffff;;
+  background: #ffffff;
   border: #c8c9bb solid;
   margin: auto;
   margin-top: 120px;
@@ -102,6 +102,8 @@ body {
   margin-right: 13px;
   bottom: 10px;
   color: #42af98;
+  font-size: 22px;
+  top: 102px;
 }
 
 #progress {
@@ -118,7 +120,6 @@ body {
   display: flex;
   justify-content: space-between;
 }
-
 
 .player-controls {
   position: relative;
@@ -139,40 +140,87 @@ body {
   text-align: center;
 }
 
-
 .button-wrapper:hover {
   filter: brightness(80%);
   cursor: pointer;
 }
 
 #vol-control {
-  -webkit-appearance: slider-vertical;
   position: relative;
-  width: 32px;
+  width: 100px;
   z-index: 90;
-  bottom: 10px;
+  top: 28px;
+  left: 10px;
 }
 
 #volumeButtonBox {
   position: absolute;
 }
 
+.fa-backward {
+  margin-top: 18px;
+  font-size: 30px;
+}
 
+.fa-forward {
+  margin-top: 18px;
+  font-size: 30px;
+}
 
-#volumeButtonDown {
-  background-color: #626262;
-  color: #626262;
-  width: 7px;
-  height: 48px;
-  position: relative;
-  
-  margin-top: 10px;
-  border-radius: 10%;
+.fa-play {
+  margin-top: 19.5px;
+  font-size: 26px;
+}
+
+.fa-pause {
+  margin-top: 19.5px;
+  font-size: 26px;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  height: 18px;
+  width: 10px;
+  border-radius: 3px;
+  background: #42af98;
+  cursor: pointer;
+  margin-top: -5px;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: #42af98;
+  border-radius: 1.3px;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #42af98;
 }
 
 @media screen and (max-width: 376px) {
   .player-container {
     width: 95vw;
+    height: 95vh;
   }
 }
-
