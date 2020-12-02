@@ -137,6 +137,9 @@ function updateProgressBar(e) {
 
 //set progress bar
 function setProgressBar(e) {
+  if(!isPlayling) {
+    playSong()
+  }
   const width = this.clientWidth;
   const clickX = e.offsetX;
   const { duration } = music;

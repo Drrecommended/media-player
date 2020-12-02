@@ -12,6 +12,17 @@
   width: 100vw;
   top: 0;
   z-index: 10;
+  background-color: darkslategray;
+  height: 25px;
+  justify-content: space-evenly;
+}
+
+a {
+  margin-top: 5px;
+  padding: 5px;
+  text-decoration: none;
+  color: #ee8f1b;
+  margin-bottom: 5px;
 }
 
 body {
@@ -29,10 +40,9 @@ body {
   box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
   height: 534px;
   width: 380px;
-  background: #ffffff;
+  background: #858587;
   border: #c8c9bb solid;
   margin: auto;
-  margin-top: 120px;
   z-index: 10;
 }
 
@@ -127,14 +137,14 @@ body {
   margin: auto;
   margin-top: 5px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .button-wrapper {
   background-color: #ee8f1b;
-  width: 114px;
+  width: 35%;
   height: 70px;
-  border: 1px solid black;
+  border: #c8c9bb solid;
   border-radius: 10%;
   position: relative;
   text-align: center;
@@ -151,6 +161,7 @@ body {
   z-index: 90;
   top: 28px;
   left: 10px;
+  outline: none;
 }
 
 #volumeButtonBox {
@@ -168,12 +179,12 @@ body {
 }
 
 .fa-play {
-  margin-top: 19.5px;
+  margin-top: 18.5px;
   font-size: 26px;
 }
 
 .fa-pause {
-  margin-top: 19.5px;
+  margin-top: 18.5px;
   font-size: 26px;
 }
 
@@ -218,9 +229,13 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   background: #42af98;
 }
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 812px), screen and (max-height: 568px), screen and (min-width: 320px) {
   .player-container {
-    width: 95vw;
-    height: 95vh;
+    width: 320px;
+    height: 534px;
+    margin-top: 8%;
   }
+
+  
 }
+
